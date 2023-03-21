@@ -74,21 +74,28 @@ The function pid is called in [main.cpp](https://github.com/hrkssk/nd013-c6-cont
 Ths is the results of the first test. The vehicle can't pass the car and crash to the wall.
 I used Kp = 0.1, Kd = 0.0, Ki = 0.0.
 The values of the error are below.
-![thottle_data](thottle_data_1.png)
 ![steer_data](steer_data_1.png)
+![thottle_data](thottle_data_1.png)
 
-To Tune the parameters of the pid, I tried Ziegler–Nichols method.
-[Ziegler–Nichols method](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method)
+To Tune the parameters of the pid, I reffered the link below.
+[What are good strategies for tuning PID loops?](https://robotics.stackexchange.com/questions/167/what-are-good-strategies-for-tuning-pid-loops#:~:text=To%20tune%20a%20PID%20use%20the%20following%20steps%3A,D%20to%20the%20last%20stable%20values.%20More%20items)
 
-####  step 4-1: Set all gains to zero and Increase the $P$ gain until the response to a disturbance is steady oscillation. it reaches the ultimate gain $K_u$.
+[How should we adjust the PID parameters when a output of the machine is bounded in a range?](https://knowledge.udacity.com/questions/941484)
 
+####  step 4-1: Set all gains to zero and Increase the $P$ gain until the response to a disturbance is steady oscillation.
+I used Kp = 0.8, Kd = 0.0, Ki = 0.0.
+![steer_data](steer_data_s08_t02.png)
+![thottle_data](thottle_data_s08_t02.png)
 
-#### step 4-2: $K_u$ and the oscillation period $T_u$ are are then used to set the $P$, $I$, and $D$ gains.
-| Control Type | $K_p$ | $K_i$ | $K_d$ |
-| ------------ | ----- | ----- | ----- |
-| classic PID  | $0.6 * K_u$ | $1.2 * K_u /T_u$ | $0.075 * K_u * T_u$ |
+#### step 4-2: Increase the $D$ gain until the oscillations go away.
+I used Kp = 0.8, Kd = 0.4, Ki = 0.0. the oscillations still remained, but it did not decrease while $D$ is increased.
+![steer_data](steer_data_s08_04_t02.png)
+![thottle_data](thottle_data_s08_04_t02.png)
 
-
+#### step 4-2: Increase the $D$ gain until the oscillations go away.
+I used Kp = 0.8, Kd = 0.4, Ki = 0.05. the oscillations still remained, but it is a little decrease in order to increase the $I$ gain.
+![steer_data](steer_data_s08_04_005_t02.png)
+![thottle_data](thottle_data_s08_04_005_t02.png)
 
 
 
