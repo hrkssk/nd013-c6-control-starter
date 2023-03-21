@@ -80,16 +80,16 @@ The values of the error are below.
 To Tune the parameters of the pid, I tried Ziegler–Nichols method.
 [Ziegler–Nichols method](https://en.wikipedia.org/wiki/Ziegler%E2%80%93Nichols_method)
 
-####  step 4-1: Set all gains to zero and Increase the P gain until the response to a disturbance is steady oscillation. it reaches the ultimate gain Ku.
+####  step 4-1: Set all gains to zero and Increase the $P$ gain until the response to a disturbance is steady oscillation. it reaches the ultimate gain $K_u$.
 
 
-#### step 4-2: Ku and the oscillation period Tu are are then used to set the P, I, and D gains.
+#### step 4-2: $K_u$ and the oscillation period $T_u$ are are then used to set the $P$, $I$, and $D$ gains.
 
-```math
+$$
 K_p = 0.6 * K_u\\
 K_i = 1.2 * K_u /T_u\\
 K_d = 0.075 * K_u * T_u\\
-```
+$$
 
 
 
