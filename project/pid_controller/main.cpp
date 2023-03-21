@@ -300,7 +300,10 @@ int main ()
           **/
           // The error is the angle difference between the actual steer and the desired steer to reach the planned position.
           // The variable y_points and x_point gives the desired trajectory planned by the path_planner.
-          error_steer = 0;
+          // the position of the car is stored in the variables x_position, y_position and z_position
+          // yaw gives the actual rotational angle of the car.
+          double yaw_desired = angle_between_points(x_position, y_position, x_points[x_points.size()-1], y_points[y_points.size()-1]);
+          error_steer = yaw_desired - yaw;
 
           /**
           * TODO (step 3): uncomment these lines
