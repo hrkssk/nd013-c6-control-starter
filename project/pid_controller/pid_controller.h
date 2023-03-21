@@ -17,18 +17,22 @@ public:
     /*
     * Errors
     */
+    double p_error, i_error, d_error;
 
     /*
     * Coefficients
     */
+    double Kp, Ki, Kd;
 
     /*
     * Output limits
     */
-  
+    double output_lim_min, output_lim_max;
+
     /*
     * Delta time
     */
+    double delta_time;
 
     /*
     * Constructor
@@ -54,7 +58,7 @@ public:
     * Calculate the total PID error.
     */
     double TotalError();
-  
+
     /*
     * Update the delta time.
     */
@@ -62,5 +66,3 @@ public:
 };
 
 #endif //PID_CONTROLLER_H
-
-
