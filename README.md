@@ -86,9 +86,9 @@ To Tune the parameters of the pid, I tried Ziegler–Nichols method.
 #### step 4-2: Ku and the oscillation period Tu are are then used to set the P, I, and D gains.
 
 ```math
-K_p = 0.6 * K_u \\
-K_i = 1.2 * K_u /T_u \\
-K_d = 0.075 * K_u * T_u \\
+K_p = 0.6 * K_u\\
+K_i = 1.2 * K_u /T_u\\
+K_d = 0.075 * K_u * T_u\\
 ```
 
 
