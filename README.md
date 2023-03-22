@@ -61,8 +61,8 @@ In the directory [/pid_controller](https://github.com/hrkssk/nd013-c6-control-st
 The function pid is called in [main.cpp](https://github.com/hrkssk/nd013-c6-control-starter/blob/master/project/pid_controller/main.cpp).
 
 ### Step 1: Build the PID controller object
-Run the simulator and see in the desktop mode the car in the CARLA simulator. The car did not move in the simulation.
-![image](step1.png)
+Run the simulator and see in the desktop mode the car in the CARLA simulator. The car did not move in the simulation.<br>
+![image](step1.png)<br>
 
 ### Step 2: PID controller for throttle:
 The function pid is called in [main.cpp](https://github.com/hrkssk/nd013-c6-control-starter/blob/master/project/pid_controller/main.cpp).
@@ -71,9 +71,8 @@ The function pid is called in [main.cpp](https://github.com/hrkssk/nd013-c6-cont
 The function pid is called in [main.cpp](https://github.com/hrkssk/nd013-c6-control-starter/blob/master/project/pid_controller/main.cpp).
 
 ### Step 4: Evaluate the PID efficiency
-Ths is the results of the first test. The vehicle can't pass the car and crash to the wall.
-I used Kp = 0.1, Kd = 0.0, Ki = 0.0.
-The values of the error are below.
+Ths is the results of the first test. The vehicle can't pass the car and crash to the wall.<br>
+I used Kp = 0.1, Kd = 0.0, Ki = 0.0.The values of the error are below.<br>
 ![steer_data](steer_data_1.png)
 ![thottle_data](thottle_data_1.png)
 
@@ -83,19 +82,19 @@ To Tune the parameters of the pid, I reffered the link below.
 [How should we adjust the PID parameters when a output of the machine is bounded in a range?](https://knowledge.udacity.com/questions/941484)
 
 ####  step 4-1: Set all gains to zero and Increase the $P$ gain until the response to a disturbance is steady oscillation.
-I used Kp = 0.8, Kd = 0.0, Ki = 0.0.
-![steer_data](steer_data_s08_t02.png)
-![thottle_data](thottle_data_s08_t02.png)
+I used Kp = 0.8, Kd = 0.0, Ki = 0.0.<br>
+![steer_data](steer_data_s08_t02.png)<br>
+![thottle_data](thottle_data_s08_t02.png)<br>
 
 #### step 4-2: Increase the $D$ gain until the oscillations go away.
-I used Kp = 0.8, Kd = 0.4, Ki = 0.0. the oscillations still remained, but it did not decrease while $D$ is increased.
-![steer_data](steer_data_s08_04_t02.png)
-![thottle_data](thottle_data_s08_04_t02.png)
+I used Kp = 0.8, Kd = 0.4, Ki = 0.0. the oscillations still remained, but it did not decrease while $D$ is increased.<br>
+![steer_data](steer_data_s08_04_t02.png)<br>
+![thottle_data](thottle_data_s08_04_t02.png)<br>
 
 #### step 4-2: Increase the $D$ gain until the oscillations go away.
-I used Kp = 0.8, Kd = 0.4, Ki = 0.05. the oscillations still remained, but it is a little decrease in order to increase the $I$ gain.
-![steer_data](steer_data_s08_04_005_t02.png)
-![thottle_data](thottle_data_s08_04_005_t02.png)
+I used Kp = 0.8, Kd = 0.4, Ki = 0.05. the oscillations still remained, but it is a little decrease in order to increase the $I$ gain.<br>
+![steer_data](steer_data_s08_04_005_t02.png)<br>
+![thottle_data](thottle_data_s08_04_005_t02.png)<br>
 
 
 
