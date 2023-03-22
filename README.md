@@ -73,13 +73,13 @@ The function pid is called in [main.cpp](https://github.com/hrkssk/nd013-c6-cont
 ### Step 4: Evaluate the PID efficiency
 Ths is the results of the first test. The vehicle can't pass the car and crash to the wall.<br>
 I used Kp = 0.1, Kd = 0.0, Ki = 0.0.The values of the error are below.<br>
-![steer_data](steer_data_1.png)
-![thottle_data](thottle_data_1.png)
+![steer_data](steer_data_1.png)<br>
+![thottle_data](thottle_data_1.png)<br>
 
-To Tune the parameters of the pid, I reffered the link below.
-[What are good strategies for tuning PID loops?](https://robotics.stackexchange.com/questions/167/what-are-good-strategies-for-tuning-pid-loops#:~:text=To%20tune%20a%20PID%20use%20the%20following%20steps%3A,D%20to%20the%20last%20stable%20values.%20More%20items)
+To Tune the parameters of the pid, I reffered the link below.<br>
+[What are good strategies for tuning PID loops?](https://robotics.stackexchange.com/questions/167/what-are-good-strategies-for-tuning-pid-loops#:~:text=To%20tune%20a%20PID%20use%20the%20following%20steps%3A,D%20to%20the%20last%20stable%20values.%20More%20items)<br>
 
-[How should we adjust the PID parameters when a output of the machine is bounded in a range?](https://knowledge.udacity.com/questions/941484)
+[How should we adjust the PID parameters when a output of the machine is bounded in a range?](https://knowledge.udacity.com/questions/941484)<br>
 
 ####  step 4-1: Set all gains to zero and Increase the $P$ gain until the response to a disturbance is steady oscillation.
 I used Kp = 0.8, Kd = 0.0, Ki = 0.0.<br>
