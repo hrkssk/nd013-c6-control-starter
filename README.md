@@ -95,6 +95,8 @@ I used Kp = 0.8, Kd = 0.4, Ki = 0.0. the oscillations still remained, but it did
 
 #### step 4-3: Increase the $I$ gain until the oscillations go away.
 I used Kp = 0.8, Kd = 0.4, Ki = 0.05. the oscillations still remained, but it is a little decrease in order to increase the $I$ gain.<br>
+Maybe, because the value of Kp is too high, the oscillations is not decreased.
+
 ![steer_data](steer_data_s08_04_005_t02.png)<br>
 ![thottle_data](thottle_data_s08_04_005_t02.png)<br>
 
