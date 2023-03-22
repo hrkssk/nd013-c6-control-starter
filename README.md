@@ -77,6 +77,8 @@ I used Kp = 0.1, Kd = 0.0, Ki = 0.0.The values of the error are below.<br>
 ![thottle_data](thottle_data_1.png)<br>
 
 To Tune the parameters of the pid, I reffered the link below.<br>
+Following the content of the links, I used "pid_throttle.Init(0.20,0.001,0.02, 1, -1)".
+
 [What are good strategies for tuning PID loops?](https://robotics.stackexchange.com/questions/167/what-are-good-strategies-for-tuning-pid-loops#:~:text=To%20tune%20a%20PID%20use%20the%20following%20steps%3A,D%20to%20the%20last%20stable%20values.%20More%20items)<br>
 
 [How should we adjust the PID parameters when a output of the machine is bounded in a range?](https://knowledge.udacity.com/questions/941484)<br>
@@ -91,7 +93,7 @@ I used Kp = 0.8, Kd = 0.4, Ki = 0.0. the oscillations still remained, but it did
 ![steer_data](steer_data_s08_04_t02.png)<br>
 ![thottle_data](thottle_data_s08_04_t02.png)<br>
 
-#### step 4-2: Increase the $D$ gain until the oscillations go away.
+#### step 4-3: Increase the $I$ gain until the oscillations go away.
 I used Kp = 0.8, Kd = 0.4, Ki = 0.05. the oscillations still remained, but it is a little decrease in order to increase the $I$ gain.<br>
 ![steer_data](steer_data_s08_04_005_t02.png)<br>
 ![thottle_data](thottle_data_s08_04_005_t02.png)<br>
@@ -101,8 +103,14 @@ I used Kp = 0.8, Kd = 0.4, Ki = 0.05. the oscillations still remained, but it is
 Answer the following questions:
 - Add the plots to your report and explain them (describe what you see)
 - What is the effect of the PID according to the plots, how each part of the PID affects the control command?
+  Kp controls the response to a disturbance.
+  Kd and Ki controls the decay of the oscillation from the response.
 - How would you design a way to automatically tune the PID parameters?
+  First, We increase Kp as quickly as the response to avoid the collision to the obstacles.
+  Then increase Kd and Ki until the oscillation stops
 - PID controller is a model free controller, i.e. it does not use a model of the car. Could you explain the pros and cons of this type of controller?
+  the pros is that we don't have to create a model for each car.
+  the cons is that PID can not complete to optimize the car dynamics.
 - (Optional) What would you do to improve the PID controller?
 
 
