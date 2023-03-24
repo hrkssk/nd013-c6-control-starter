@@ -84,21 +84,20 @@ Following the content of the links, I used "pid_throttle.Init(0.20,0.001,0.02, 1
 [How should we adjust the PID parameters when a output of the machine is bounded in a range?](https://knowledge.udacity.com/questions/941484)<br>
 
 ####  step 4-1: Set all gains to zero and Increase the $P$ gain until the response to a disturbance is steady oscillation.
-I used Kp = 0.8, Kd = 0.0, Ki = 0.0.<br>
-![steer_data](steer_data_s08_t02.png)<br>
-![thottle_data](thottle_data_s08_t02.png)<br>
+I used Kp = 0.5, Kd = 0.0, Ki = 0.0.<br>
+I got enogh response to a disturbance, however steering error was oscillated.
+![steer_data](steer_p05_i00_d00.png)<br>
+![thottle_data](thottle_p05_i00_d00.png)<br>
 
 #### step 4-2: Increase the $D$ gain until the oscillations go away.
-I used Kp = 0.8, Kd = 0.4, Ki = 0.0. the oscillations still remained, but it did not decrease while $D$ is increased.<br>
-![steer_data](steer_data_s08_04_t02.png)<br>
-![thottle_data](thottle_data_s08_04_t02.png)<br>
+I used Kp = 0.5, Kd = 0.3, Ki = 0.0. the oscillations was decay, however one of the several tests had a little oscillating.<br>
+![steer_data](steer_p05_i00_d03.png)<br>
+![thottle_data](thottle_p05_i00_d03.png)<br>
 
-#### step 4-3: Increase the $I$ gain until the oscillations go away.
-I used Kp = 0.8, Kd = 0.4, Ki = 0.05. the oscillations still remained, but it is a little decrease in order to increase the $I$ gain.<br>
-Maybe, because the value of Kp is too high, the oscillations is not decreased.
-
-![steer_data](steer_data_s08_04_005_t02.png)<br>
-![thottle_data](thottle_data_s08_04_005_t02.png)<br>
+#### step 4-3: Increase the $I$ gain until getting stable control.
+I used Kp = 0.5, Kd = 0.3, Ki = 0.005. the oscillations was decay, and I got stable control.<br>
+![steer_data](steer_p05_i0005_d03.png)<br>
+![thottle_data](thottle_p05_i0005_d03.png)<br>
 
 
 
